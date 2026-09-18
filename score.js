@@ -193,7 +193,7 @@ function submitForm(e) {
 
 function init() {
   var form = getFormElement();
-  if (form) {
+  if (form && !form.getAttribute("onsubmit")) {
     form.addEventListener("submit", handleSubmit);
     form.onsubmit = handleSubmit;
   }
@@ -205,7 +205,7 @@ function init() {
             document.querySelector('button[type="submit"]') ||
             document.querySelector("button");
 
-  if (btn && (!form || btn.type !== "submit")) {
+  if (btn && !btn.getAttribute("onclick") && (!form || btn.type !== "submit")) {
     btn.addEventListener("click", handleSubmit);
   }
 }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score Tracker</title>
+</head>
+<body>
+    <h2>Score Tracker</h2>
+    <form id="scoreForm" onsubmit="handleSubmit(event)">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="score">Score:</label>
+            <input type="text" id="score" name="score">
+        </div>
+        <button type="submit" id="submit" onclick="handleSubmit(event)">Submit</button>
+    </form>
+    <div id="error"></div>
+    <ul id="list"></ul>
+    <div id="average"></div>
+    <script src="score.js"></script>
+</body>
+</html>
